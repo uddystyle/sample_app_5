@@ -4,7 +4,11 @@ class UserTest < ActiveSupport::TestCase
 
   def setup
     @user = User.new(name: "Example User", email: "user@example.com",
+<<<<<<< HEAD
                      password: "foobar", password_confirmation: "foobar")
+=======
+        password: "foobar", password_confirmation: "foobar")
+>>>>>>> advanced-login
   end
 
   test "should be valid" do

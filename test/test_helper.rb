@@ -18,6 +18,7 @@ class ActiveSupport::TestCase
   def log_in_as(user)
     session[:user_id] = user.id
   end
+<<<<<<< HEAD
 end
 
 class ActionDispatch::IntegrationTest
@@ -26,5 +27,17 @@ class ActionDispatch::IntegrationTest
     post login_path, params: { session: { email: user.email,
                                           password: password,
                                           remember_me: remember_me } }
+  end
+=======
+>>>>>>> advanced-login
+end
+
+class ActionDispatch::IntegrationTest
+
+  # テストユーザーとしてログインする
+  def log_in_as(user, password: 'password', remember_me: '1')
+    post login_path, params: { session: { email: user.email,
+        password: password,
+        remember_me: remember_me } }
   end
 end
